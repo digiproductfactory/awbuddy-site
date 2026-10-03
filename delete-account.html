@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete AWBuddy Account</title>
+<meta name="description" content="How to request deletion of your AWBuddy account and data (Digi Product Factory).">
+<style>
+  :root { --bg:#ffffff; --text:#1f2328; --muted:#59636e; --accent:#0b57d0; --card:#f6f8fa; --border:#d0d7de; --warn-bg:#fff8c5; --warn-border:#d4a72c; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0d1117; --text:#e6edf3; --muted:#9198a1; --accent:#7cacf8; --card:#161b22; --border:#30363d; --warn-bg:#272115; --warn-border:#9e6a03; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px; }
+  nav { font-size:.95rem; margin-bottom:16px; }
+  h1 { font-size:1.8rem; margin:0 0 4px; line-height:1.25; }
+  h2 { font-size:1.25rem; margin:32px 0 8px; }
+  .meta { color:var(--muted); margin:0 0 24px; }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+  ol.steps { list-style:none; padding:0; margin:0; display:grid; gap:12px; counter-reset:step; }
+  ol.steps > li { counter-increment:step; background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 16px 16px 60px; position:relative; }
+  ol.steps > li::before { content:counter(step); position:absolute; left:16px; top:14px; width:30px; height:30px; border-radius:50%; background:var(--accent); color:var(--bg); font-weight:700; display:flex; align-items:center; justify-content:center; }
+  ol.steps strong.title { display:block; font-size:1.05rem; margin-bottom:4px; }
+  .warn { background:var(--warn-bg); border:1px solid var(--warn-border); border-radius:10px; padding:12px 16px; margin-top:8px; }
+  .button { display:inline-block; margin-top:8px; padding:10px 16px; background:var(--accent); color:var(--bg); border-radius:8px; text-decoration:none; font-weight:600; }
+  ul { padding-left:1.25rem; }
+  li { margin:4px 0; }
+  footer { max-width:760px; margin:0 auto; padding:24px 16px 40px; color:var(--muted); font-size:.9rem; border-top:1px solid var(--border); }
+</style>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">&larr; AWBuddy</a></nav>
+  <h1>Delete your AWBuddy account</h1>
+  <p class="meta">AWBuddy by Digi Product Factory</p>
+
+  <p>Follow these steps to have your AWBuddy account and its data deleted.</p>
+
+  <ol class="steps">
+    <li>
+      <strong class="title">Cancel your Google Play subscription first</strong>
+      <div class="warn"><strong>Deleting your AWBuddy account does NOT cancel your subscription.</strong>
+      Google Play keeps charging you until you cancel it there.</div>
+      Open the Play Store app &rarr; tap your profile picture &rarr; <em>Payments &amp; subscriptions</em>
+      &rarr; <em>Subscriptions</em> &rarr; AWBuddy &rarr; <em>Cancel subscription</em>.
+      Or go to <a href="https://play.google.com/store/account/subscriptions" rel="noopener">play.google.com/store/account/subscriptions</a>.
+    </li>
+    <li>
+      <strong class="title">Email us your request</strong>
+      Send an email to <a href="mailto:digiproductfactory@gmail.com?subject=Delete%20my%20AWBuddy%20account">digiproductfactory@gmail.com</a>
+      with the subject <strong>"Delete my AWBuddy account"</strong> and the mobile number you sign in to
+      AWBuddy with.<br>
+      <a class="button" href="mailto:digiproductfactory@gmail.com?subject=Delete%20my%20AWBuddy%20account">Email deletion request</a>
+    </li>
+    <li>
+      <strong class="title">We verify and delete within 7 days</strong>
+      We confirm that the request comes from the account holder (we may ask you to reply from the same
+      email or confirm details of your account), then delete your account data within 7 days and email
+      you when it's done.
+    </li>
+  </ol>
+
+  <h2>What we delete</h2>
+  <ul>
+    <li>Your AWBuddy account record: phone number, sign-in identity (Firebase user ID), trial and scan
+    counters, time of last scan and plan tier.</li>
+    <li>Subscription details we store: Google Play purchase token, plan, expiry, subscription state,
+    auto-renew status and hashed billing account ID.</li>
+    <li>Our purchase records that link a purchase to your account.</li>
+  </ul>
+
+  <h2>What we keep</h2>
+  <ul>
+    <li><strong>A "trial used" marker</strong>: a one-way hash of your phone number, with no other
+    details, so that the same number can't start another free trial. It cannot be turned back into your
+    number.</li>
+    <li><strong>Google's own order records</strong> of any Google Play purchases, which Google keeps
+    under its own policies.</li>
+    <li>Server logs that may contain your phone number are deleted automatically by Google Cloud
+    Logging after its standard retention period (normally 30 days).</li>
+  </ul>
+
+  <h2>Scans stored on your phone</h2>
+  <p>Your saved scans (customer names, addresses, AWB numbers and so on) are stored only on your phone,
+  so we can't delete them for you. To remove them, delete them in the app's History screen or
+  <strong>uninstall AWBuddy</strong>. If Android backup is on, also remove AWBuddy's data from your
+  Google account backup.</p>
+
+  <p>More details: <a href="privacy.html#delete">AWBuddy Privacy Policy &rarr; Deleting your account</a>.</p>
+</main>
+<footer>
+  AWBuddy &middot; Digi Product Factory &middot;
+  <a href="mailto:digiproductfactory@gmail.com">digiproductfactory@gmail.com</a>
+</footer>
+</body>
+</html>

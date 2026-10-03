@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AWBuddy Privacy Policy</title>
+<meta name="description" content="Privacy Policy for the AWBuddy Android app by Digi Product Factory.">
+<style>
+  :root { --bg:#ffffff; --text:#1f2328; --muted:#59636e; --accent:#0b57d0; --card:#f6f8fa; --border:#d0d7de; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0d1117; --text:#e6edf3; --muted:#9198a1; --accent:#7cacf8; --card:#161b22; --border:#30363d; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px; }
+  nav { font-size:.95rem; margin-bottom:16px; }
+  h1 { font-size:1.8rem; margin:0 0 4px; line-height:1.25; }
+  h2 { font-size:1.25rem; margin:32px 0 8px; }
+  .meta { color:var(--muted); margin:0 0 24px; }
+  a { color:var(--accent); }
+  ul { padding-left:1.25rem; }
+  li { margin:4px 0; }
+  .note { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px 16px; }
+  table { width:100%; border-collapse:collapse; font-size:.95rem; }
+  th, td { text-align:left; vertical-align:top; padding:8px; border-bottom:1px solid var(--border); }
+  .table-wrap { overflow-x:auto; }
+  footer { max-width:760px; margin:0 auto; padding:24px 16px 40px; color:var(--muted); font-size:.9rem; border-top:1px solid var(--border); }
+</style>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">&larr; AWBuddy</a></nav>
+  <h1>AWBuddy Privacy Policy</h1>
+  <p class="meta">Digi Product Factory &middot; Effective 3 October 2026</p>
+
+  <p>This policy explains what the AWBuddy Android app ("AWBuddy", "the app") collects, why, and what
+  you can do about it. AWBuddy is made by Digi Product Factory, Chennai, India ("we", "us").</p>
+
+  <div class="note"><strong>In short:</strong> the shipping labels you scan, and the customer details read
+  from them, stay on your phone and are not sent to us. We store only what we need to sign you in, count
+  your scans and manage your subscription.</div>
+
+  <h2>1. Who AWBuddy is for</h2>
+  <p>AWBuddy is a business tool for sellers who ship parcels. It is intended for users aged 18 or over,
+  using it for business. It is not directed at children.</p>
+
+  <h2>2. Data processed on your phone only</h2>
+  <ul>
+    <li><strong>Camera images</strong> of shipping labels are analysed on the device (Google ML Kit
+    on-device barcode and text recognition). Images are not stored or uploaded.</li>
+    <li><strong>Scan records</strong>: AWB number, courier, customer name, phone, address, PIN code,
+    product, amount, and the date and time of the scan. These are saved in a database on your phone and
+    are <strong>never uploaded to our servers</strong>.</li>
+    <li><strong>Excel exports</strong> are created on your phone. They leave the phone only when you
+    share them yourself (for example by email or WhatsApp).</li>
+  </ul>
+  <p>Two things to know:</p>
+  <ul>
+    <li>If Android backup is switched on, Android may include the app's data, including saved scans, in
+    your own Google account backup. That backup is controlled by you and Google, not by us.</li>
+    <li>Google ML Kit may send Google general usage and performance metrics about the recognition
+    feature. It does not send the label images or the text read from them.</li>
+  </ul>
+  <p>You are responsible for handling your customers' details lawfully, as you would with any other
+  shipping records.</p>
+
+  <h2>3. Data we collect and store</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Data</th><th>Why</th></tr>
+    <tr><td>Your mobile phone number</td><td>Signing in (one-time SMS code). Your account is identified by this number.</td></tr>
+    <tr><td>Firebase user ID</td><td>Created by Firebase Authentication when you sign in; links your account and purchases.</td></tr>
+    <tr><td>Account and scan counters: date the account and trial started, number of scans used in the trial and in the current billing period, time of your last scan</td><td>Enforcing the free trial and your plan's monthly scan allowance. Only the count and time are sent, never the scan contents.</td></tr>
+    <tr><td>Plan tier (trial, a paid plan, expired, or enterprise)</td><td>Deciding what you can use.</td></tr>
+    <tr><td>Subscription data: Google Play purchase token, product (plan), expiry time, subscription state, auto-renew status, whether it was a test purchase, the reason a subscription ended, and when we last checked it with Google Play</td><td>Verifying your subscription with Google Play, renewing your monthly allowance and ending access when a subscription ends.</td></tr>
+    <tr><td>Hashed billing account ID (a one-way SHA-256 hash of your Firebase user ID)</td><td>Attached to your Google Play purchase so a purchase can only unlock the account that made it. It contains no personal details.</td></tr>
+    <tr><td>Purchase records (a hash of the purchase token, with your user ID, phone number and plan)</td><td>Making sure one purchase unlocks only one account.</td></tr>
+    <tr><td>Support emails</td><td>If you email us from the app, the message includes your phone number and app version so we can help you.</td></tr>
+  </table>
+  </div>
+  <p>We do not use advertising, analytics or tracking tools, and we do not sell or rent your data.</p>
+
+  <h2>4. Services we use</h2>
+  <ul>
+    <li><strong>Firebase Authentication</strong> (Google): phone-number sign-in by SMS code.</li>
+    <li><strong>Cloud Firestore</strong> (Google, Mumbai region): stores the account, counter and
+    subscription data listed above.</li>
+    <li><strong>Cloud Functions for Firebase</strong> (Google, Mumbai region): verifies purchases with
+    Google Play and re-checks subscriptions daily. Its logs record your phone number, plan and the
+    outcome of each check.</li>
+    <li><strong>Firebase App Check with Google Play Integrity</strong>: checks that requests come from
+    the genuine AWBuddy app on a genuine device. Google Play Integrity processes device and app
+    integrity signals for this.</li>
+    <li><strong>Google Play Billing</strong>: subscriptions are bought and paid for through Google Play.
+    We never see your card, UPI or bank details. Google's own privacy policy applies to your payment.</li>
+    <li><strong>Google ML Kit</strong>: on-device barcode and text recognition (see section 2).</li>
+  </ul>
+  <p>These services are provided by Google and may process data on servers outside India. See the
+  <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> and
+  <a href="https://firebase.google.com/support/privacy" rel="noopener">Privacy and Security in Firebase</a>.</p>
+
+  <h2>5. Retention</h2>
+  <ul>
+    <li><strong>Account, counter and subscription data</strong>: kept while your account exists, and
+    deleted when you ask us to delete your account (see section 7).</li>
+    <li><strong>Server logs</strong>: kept by Google Cloud Logging for its standard retention period
+    (normally 30 days), then deleted automatically.</li>
+    <li><strong>"Trial used" marker</strong>: after deletion we keep a one-way hash of your phone number,
+    with no other details, so that the same number can't start a new free trial. It cannot be turned
+    back into your number.</li>
+    <li><strong>Google Play order records</strong> are kept by Google under its own policies.</li>
+    <li><strong>Scans on your phone</strong> stay until you delete them in the app or uninstall it.</li>
+  </ul>
+
+  <h2>6. Security</h2>
+  <p>Data is sent over encrypted connections. Our database rules let each signed-in user read only their
+  own account record. Only our server can change plan and subscription details.</p>
+
+  <h2 id="delete">7. Deleting your account</h2>
+  <p>You can ask us to delete your AWBuddy account and its data at any time. Step-by-step instructions
+  are on the <a href="delete-account.html">Delete your AWBuddy account</a> page. In short:</p>
+  <ul>
+    <li>Cancel any Google Play subscription first. Deleting your account does not cancel it.</li>
+    <li>Email <a href="mailto:digiproductfactory@gmail.com?subject=Delete%20my%20AWBuddy%20account">digiproductfactory@gmail.com</a>
+    with the subject "Delete my AWBuddy account" and the phone number you sign in with.</li>
+    <li>We verify the request and delete your account data within 7 days.</li>
+  </ul>
+
+  <h2>8. Your choices and rights</h2>
+  <p>You can ask us for a copy of the data we hold about you, ask us to correct it, or ask us to delete
+  it, by emailing us. You can withdraw camera permission in Android settings at any time, although the
+  app can't scan labels without it.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>If we change this policy, we'll update this page and the effective date above. For significant
+  changes we'll also tell you in the app.</p>
+
+  <h2>10. Contact</h2>
+  <p>Digi Product Factory, Chennai, Tamil Nadu, India<br>
+  Email: <a href="mailto:digiproductfactory@gmail.com">digiproductfactory@gmail.com</a></p>
+</main>
+<footer>
+  AWBuddy &middot; Digi Product Factory &middot;
+  <a href="mailto:digiproductfactory@gmail.com">digiproductfactory@gmail.com</a>
+</footer>
+</body>
+</html>
